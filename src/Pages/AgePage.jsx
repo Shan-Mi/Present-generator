@@ -35,7 +35,11 @@ const AgePage = () => {
             {list.map((item, index) => {
               const [value] = Object.keys(item);
               const [lable] = Object.values(item);
-              return <option value={value}>{lable}</option>;
+              return (
+                <option key={`${item}-${index}`} value={value}>
+                  {lable}
+                </option>
+              );
             })}
           </select>
         </label>

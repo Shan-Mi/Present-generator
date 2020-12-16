@@ -1,4 +1,4 @@
-export const giftList = {
+const giftList = {
   parent: {
     fashion: ["Cool t-shirt", "Cool hoody", "Warm socks"],
     tech: ["Star Wars figure", "Marvel T-shirt", "Smart Home Components"],
@@ -26,4 +26,13 @@ export const giftList = {
     tech: ["RC Car", "Smart Home Sockets", "Wifi Lamp"],
     craft: ["Get started with Molding Kit", "Sewing Kit", "A bag of cement"],
   },
+};
+
+export const ageMap = new Map();
+ageMap.set("<25", 0);
+ageMap.set("25=<50", 1);
+ageMap.set("50=<", 2);
+
+export const getGift = (age, interest, relationShip) => {
+  return giftList[relationShip][interest][age];
 };

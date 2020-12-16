@@ -1,17 +1,8 @@
-import React, { useContext } from "react";
-import { DataContext } from "../Context/GlobalContext";
+import React from "react";
+import { getGift } from "../data/data";
 
-const ResultComponent = () => {
-  const { age, interest, relationShip, giftList } = useContext(DataContext);
-
-  const ageOptions = {
-    "<25": 0,
-    "25=<50": 1,
-    "50=<": 2,
-  };
-
-  const ageResult = ageOptions[age];
-  const yourGift = giftList[relationShip][interest][ageResult];
+const ResultComponent = ({ age, interest, relationShip }) => {
+  const yourGift = getGift(age, interest, relationShip);
 
   return <p>{yourGift}</p>;
 };
