@@ -4,9 +4,7 @@ import { useHistory } from "react-router-dom";
 import ImageContainer from "../Components/ImageContainer";
 
 const RelationPage = () => {
-  const { relationShip, setRelationShip, canContinue } = useContext(
-    DataContext
-  );
+  const { relationShip, setRelationShip } = useContext(DataContext);
 
   const history = useHistory();
 
