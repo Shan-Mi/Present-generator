@@ -16,7 +16,7 @@ const ImageContainer = ({
 }) => {
   return (
     <ImageOutContainer>
-      <img src={url} alt="gift from unspalsh" />
+      <img src={url} alt="gift from unsplash" />
     </ImageOutContainer>
   );
 };
