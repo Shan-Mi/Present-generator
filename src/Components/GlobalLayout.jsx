@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const NavWrapper = styled.nav`
-  background-color: white;
+  background-color: #237dc8;
 
   ul {
     display: flex;
@@ -14,6 +14,9 @@ const NavWrapper = styled.nav`
 
     li {
       cursor: pointer;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 0.03rem;
     }
   }
 `;
